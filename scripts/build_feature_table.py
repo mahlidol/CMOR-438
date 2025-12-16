@@ -49,4 +49,20 @@ def build_feature_table():
                 **features
             }
 
-            rows.append(ro
+            rows.append(row)
+
+    if not rows:
+        raise ValueError("No songs found. Check data/raw directory.")
+
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    with open(OUTPUT_PATH, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=rows[0].keys())
+        writer.writeheader()
+        writer.writerows(rows)
+
+    print(f"\nWrote feature table to {OUTPUT_PATH}")
+
+
+if __name__ == "__main__":
+    build_feature_table()
