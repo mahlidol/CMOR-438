@@ -1,1 +1,10 @@
 
+import pandas as pd
+
+df = pd.read_csv("../data/features/song_features.csv")
+
+df.groupby("album")[[
+    "first_person_rate",
+    "second_person_rate",
+    "third_person_rate"
+]].mean()
