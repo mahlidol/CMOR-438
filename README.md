@@ -30,9 +30,12 @@ This project implements two classical machine learning algorithms
 operating on engineered song-level features:
 
 - **k-Nearest Neighbors (kNN)** is used to identify stylistically similar
-  songs in feature space.
-- **k-Means Clustering** is used to group songs into unsupervised clusters
-  based on structural, lexical, and pronoun-oriented features.
+  songs in feature space based on repetition, lexical entropy, and
+  pronoun orientation.
+- **Logistic Regression** is implemented as a supervised baseline model
+  operating on the same feature representations, demonstrating how
+  learned linguistic features can support classification-oriented
+  modeling.
 
 Together, these methods demonstrate how machine learning techniques
 can be applied to linguistic feature representations to explore
