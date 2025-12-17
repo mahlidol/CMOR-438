@@ -24,4 +24,15 @@ Summary
 
 Taken together, these results support the idea of a dynamic “sweet spot” between structure and surprise in lyrical language. Rather than trading off against one another, repetition, lexical unpredictability, and self-orientation interact in nuanced ways that shift across albums while remaining bounded by stylistic constraints.
 
+### Nearest-Neighbor Similarity (Machine Learning)
+
+To explicitly apply a classical machine learning algorithm, we use
+k-nearest neighbors (kNN) in the engineered feature space
+(repetition rate, lexical entropy, and pronoun orientation) to identify
+stylistically similar songs. This approach reveals local similarity
+patterns both within and across albums, demonstrating how machine
+learning methods can complement exploratory linguistic analysis by
+operating directly on learned feature representations.
+
+
 See `notebooks/02_structure_surprise.ipynb` for all figures and analysis code.
